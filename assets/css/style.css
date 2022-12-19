@@ -6,11 +6,12 @@
 
 header{
     padding: 30px;
-    background-color: beige;
-    margin: 20px;
+    background: linear-gradient(45deg, rgb(185, 190, 174), rgb(136, 137, 228));
+    margin: 10px;
     border-radius: 10px;
     border-color: black;
-    border: 3px solid  rgba(221, 250, 143, 0.753);;
+    border: 3px solid  rgba(221, 250, 143, 0.753);
+    text-align: right ;
 }
 .input {
         border: 2px solid rgba(255, 165, 236, 0.753);
@@ -28,4 +29,20 @@ header{
     border-radius: 5px;
     margin-top: 10px;
 
+}
+
+li {
+    height: 50px;
+    margin-top: 15px;
+    text-align: center;
+    background-color:   rgba(168, 129, 184, 0.753);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.forecast {
+    padding: 2px;
+    background-color: rgb(252, 240, 253);
+    border-radius: 5px;
 }
