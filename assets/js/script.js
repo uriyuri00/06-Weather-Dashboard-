@@ -1,5 +1,3 @@
-var APIkey = '0849b899254dd1cda16c59bb88b16cbd'
-
 var inputEl = document.getElementById('input-city');
 var searchEl = document.getElementById('search-button');
 var cityName = document.getElementById('city-name');
@@ -102,7 +100,7 @@ function getApiForecast(city) {
 }
 
 function renderHistory(){
-    historyEl.innerHTML = "";
+     historyEl.innerHTML = "";
 
         for (var i = 0; i < histories.length; i++) {
             var city = histories[i];
