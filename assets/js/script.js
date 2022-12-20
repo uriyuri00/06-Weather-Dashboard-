@@ -22,6 +22,35 @@ searchEl.addEventListener("click", function () {
     renderHistory();
 
 });
+function renderHistory(){
+    historyEl.innerHTML = "";
+
+        for (var i = 0; i < histories.length; i++) {
+            var city = histories[i];
+                
+            var historyArray = document.createElement('li');
+            historyArray.textContent = city;
+            
+            historyArray.setAttribute('value', city)
+
+            historyArray.onclick = openCityagain
+            historyEl.appendChild(historyArray);
+        
+        }
+};
+        
+function openCityagain(event) {
+    console.log(event.target.value);
+    getApiData(event.target.value);
+}
+/*li.addEventListener("click", function () {
+    var historiesList = historyEl
+    historiesList.setAttribute('cities',historyEl[i])
+    historiesList.onclick = getApiData(city);
+
+
+});*/
+
 
 function getApiData(city) {
     fetch ('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=0849b899254dd1cda16c59bb88b16cbd&units=imperial' )
@@ -99,18 +128,3 @@ function getApiForecast(city) {
 
 }
 
-function renderHistory(){
-     historyEl.innerHTML = "";
-
-        for (var i = 0; i < histories.length; i++) {
-            var city = histories[i];
-                
-            var li = document.createElement('li');
-            li.textContent = city;
-            li.setAttribute('data-index',1);
-        
-            historyEl.appendChild(li);
-        
-        }
-};
-        
